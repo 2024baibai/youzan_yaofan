@@ -32,6 +32,8 @@ def index():
 def CreateOrder():
     trade_id = request.form.get('out_trade_no',type=int)
     money = request.form.get('money',type=float)
+    if money is None:
+        money=1
     if money<0.01:
         money=1
     if money>100:
