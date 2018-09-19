@@ -1,0 +1,75 @@
+/*CSS For Comments(Article details page)*/
+ul.comments {
+    list-style-type: none;
+    padding: 0px;
+    margin: 16px 0px 0px 0px;
+}
+ul.comments li.comment:nth-child(1) {
+    border-top: 1px solid #e0e0e0;
+}
+ul.comments li.comment {
+    margin-left: 32px;
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+div.comment-thumbnail {
+    position: absolute;
+}
+.profile-thumbnail {
+    position: absolute;
+}
+ul.comments div.comment-info {
+    margin-left: 48px;
+    min-height: 48px;
+}
+ul.comments li.comment:hover {
+    background-color: #f0f0f0;
+}
+ul.comments .comment-date {
+    float: right;
+    color: #8c8c8c;
+}
+ul.comments .comment-author {
+    font-weight: bold;
+    color: #337ab7;
+}
+ul.comments .delete-comment{
+    margin: 0px 5px 0px 5px;
+}
+.comment-reply-info {
+    color: #3f42cd;
+}
+
+/*CSS For Comments(admin page), use the same CSS as above*/
+ul.comments .comment-handle-admin {
+    float: right;
+}
+ul.comments .disabled-comment-admin-info {
+    color: #2c4a35;
+}
+ul.comments div.comment-info-admin {
+    margin-left: 68px;
+    min-height: 48px;
+}
+div.manage-comments .select-comments-admin {
+    margin-left: 40px;
+}
+div.manage-comments .handle-box-admin {
+    margin-bottom: -10px;
+}
+div.manage-comments .delComments {
+    float: right;
+}
+ul.comments .delete-comment-admin-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ul.comments .disabled-comment-admin-btn {
+    margin-left: 5px;
+}
+
+/*CSS For submit comment*/
+.comment-submit {
+    margin-left: 25px;
+}
+
