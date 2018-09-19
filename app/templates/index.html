@@ -35,7 +35,7 @@
         </center>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-barcode"></span> 施舍单号</span>
-            <input size="30" name="WIDout_trade_no" id="WIDout_trade_no" class="form-control"/>
+            <input size="30" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d.]/g,'')" name="WIDout_trade_no" id="WIDout_trade_no" class="form-control"/>
           </div>
           <br/>
           <div class="input-group">
@@ -45,7 +45,7 @@
           <br/>
           <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-yen"></span> 施舍金额</span>
-            <input size="30" name="WIDtotal_fee" id="WIDtotal_fee"  class="form-control" required="required"/>
+            <input size="30" name="WIDtotal_fee" id="WIDtotal_fee" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" onafterpaste="this.value=this.value.replace(/[^\d.]/g,'')"  class="form-control" required="required"/>
           </div>
           <br/>
           <center>
@@ -177,7 +177,7 @@
                         layer.confirm(str, {
                             btn: ['已打赏','后悔了'] //按钮
                           },function(index){
-                          window.location.href="/check_order?tradeid="+out_trade_no;
+                          window.location.reload();
                           layer.close(index);
                         });
                       }
