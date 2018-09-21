@@ -30,7 +30,7 @@ def YaoFan_total():
     num_today=Order.query.filter(Order.trade_status==True,Order.starttime>=today()).count()
     money_today=db.session.query(func.sum(Order.money).label('money_today')).filter(Order.trade_status==True,Order.starttime>=today()).first().money_today
     num_yesterday=Order.query.filter(Order.trade_status==True,Order.starttime>=yesterday(),Order.starttime<today()).count()
-    money_yesterday=db.session.query(func.sum(Order.money).label('money_yesterday')).filter(Order.trade_status==True,Order.starttime>=today(),Order.starttime<today()).first().money_yesterday
+    money_yesterday=db.session.query(func.sum(Order.money).label('money_yesterday')).filter(Order.trade_status==True,Order.starttime>=yesterday(),Order.starttime<today()).first().money_yesterday
     num_total=Order.query.filter(Order.trade_status==True).count()
     money_total=db.session.query(func.sum(Order.money).label('money_total')).filter(Order.trade_status==True).first().money_total
     if money_today is None:
