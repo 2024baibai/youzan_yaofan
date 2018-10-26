@@ -32,7 +32,7 @@
 
 **安装教程**
 
-转移到[博客查看](https://abbeyok.com/2018/09/19/abbey_yaofan_system/)
+转移到[博客查看](https://abbeyok.com/?p=68)
 
 
 
